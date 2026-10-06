@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-general-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #121212;
+  --color-muted: #6e6e73;
+  --color-line: #e6e6e8;
+  --color-canvas: #f3f3f4;
+  --color-danger: #ff3b30;
+}
+
+html,
+body {
+  background: #f3f3f4;
+  color: #121212;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}

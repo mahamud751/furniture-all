@@ -1,0 +1,432 @@
+[
+ {
+  "slug": "gulshan-9859",
+  "title": "GULSHAN AVENUE MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Level 4, Rangs Z Square, House 118, Gulshan Avenue, Dhaka 1212",
+  "contact": "(+88) 01896042427",
+  "hours": [
+   "10:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/SDcEECYWMkE3BtrW7",
+  "lat": 23.79251,
+  "lng": 90.41252,
+  "image": "/images/stores/gulshan-9859.jpg"
+ },
+ {
+  "slug": "khilgaon-7718",
+  "title": "KHILGAON MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Shop 02, Ground Floor, House No. 380, Holding No. 955, Block B, Taltola, Khilgaon, Rampura, Dhaka–1219",
+  "contact": "(+88) 01805469192",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/TEmJhDecHjyrwuiU9",
+  "lat": 23.75132,
+  "lng": 90.41945,
+  "image": "/images/stores/khilgaon-7718.jpg"
+ },
+ {
+  "slug": "dhanmondi-2-6873",
+  "title": "DHANMONDI 2 FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "Level 2, Ahmad and Kazi Tower, Holding No. 35, Road No. 2, Dhanmondi, Dhaka 1205",
+  "contact": "(+88) 01805469195",
+  "hours": [
+   "10:00 AM - 10:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/yvSY9zvGo2YX2dD2A",
+  "lat": null,
+  "lng": null,
+  "image": "/images/stores/dhanmondi-2-6873.jpg"
+ },
+ {
+  "slug": "south-banasree-8697",
+  "title": "SOUTH BANASREE FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "1st & 2nd Floors, London Tower, House No. 44, Road No. 12, Block L, Avenue 08, South Banasree, Khilgaon, Dhaka–1219",
+  "contact": "(+88) 01805469191",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/uW3SbsHCpoRJ6gpt9",
+  "lat": 23.75232,
+  "lng": 90.43661,
+  "image": "/images/stores/south-banasree-8697.jpg"
+ },
+ {
+  "slug": "sangsad-avenue-8242",
+  "title": "Sangsad Avenue Flagship Store",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "Level 1 and 2, G.H. Tower, Holding No. 1/B, Sangshad Avenue, Bijoy Sarani, Monipuripara, Dhaka 1215",
+  "contact": "(+88) 01805469194",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/n4jbnZHGGHzuFSnP8",
+  "lat": 23.76231,
+  "lng": 90.37862,
+  "image": "/images/stores/sangsad-avenue-8242.jpg"
+ },
+ {
+  "slug": "jamuna2",
+  "title": "JAMUNA FUTURE PARK WOMENSWEAR FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "Shop No. 1D021, Level 01, East Court, Jamuna Future Park, Baridhara, Dhaka 1229",
+  "contact": "(+88) 01896042422",
+  "hours": [
+   "11:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Thursday, Friday, Saturday)",
+   "Closed: (Wednesday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/eahzCvKnR3MmUZLPA",
+  "lat": 23.81342,
+  "lng": 90.42431,
+  "image": "/images/stores/jamuna2.jpg"
+ },
+ {
+  "slug": "jamuna-future-park-3-5266",
+  "title": "JAMUNA FUTURE PARK MENSWEAR FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "Shop No: 1B-024B,  025, Level 01, North Court, Jamuna Future Park, Baridhara, Dhaka 1229",
+  "contact": "(+88) 01896042423",
+  "hours": [
+   "11:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Thursday, Friday, Saturday)",
+   "Closed: (Wednesday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/wroYfvX5QAaWH5UGA",
+  "lat": 23.81342,
+  "lng": 90.42431,
+  "image": "/images/stores/jamuna-future-park-3-5266.jpg"
+ },
+ {
+  "slug": "banani-11",
+  "title": "Banani 11 Multi-Brand Store",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Level 3, Tower 52,  Road 11, Block C, Banani, Dhaka 1213",
+  "contact": "(+88) 01885999001",
+  "hours": [
+   "10:00 AM - 10:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://g.page/illiyeen-Banani?gm",
+  "lat": 23.79373,
+  "lng": 90.40478,
+  "image": "/images/stores/banani-11.jpg"
+ },
+ {
+  "slug": "bashundhara-city",
+  "title": "BASHUNDHARA CITY DISPLAY CENTER",
+  "type": "Display Center",
+  "region": "DHAKA",
+  "address": "Shop No. 27, 41-42, 55-56, 66-67, Level 2, Block A, Bashundhara City, Panthapath, Dhaka 1215",
+  "contact": "(+88) 01885999002",
+  "hours": [
+   "11:00 AM - 08:00 PM (Sunday, Monday, Wednesday, Thursday, Friday, Saturday)",
+   "Closed: (Tuesday)"
+  ],
+  "mapUrl": "https://g.page/r/CTU5vAmDQZpeEAE",
+  "lat": 23.75034,
+  "lng": 90.39055,
+  "image": "/images/stores/bashundhara-city.jpg"
+ },
+ {
+  "slug": "ep-rd",
+  "title": "ELEPHANT ROAD MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Rahman Mansion, 73 New Elephant Road, Dhaka 1205",
+  "contact": "(+88) 01885999008",
+  "hours": [
+   "10:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://goo.gl/maps/aQqghXfzoQkGsTMB9",
+  "lat": 23.73503,
+  "lng": 90.38601,
+  "image": "/images/stores/ep-rd.jpg"
+ },
+ {
+  "slug": "dhanmondi-27",
+  "title": "DHANMONDI 27 MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Level 3, Sima Blossom, House 3, Road 27 (Old) / Road 16 (New), Dhanmondi R/A, Dhaka 1209",
+  "contact": "(+88) 01885999005",
+  "hours": [
+   "10:00 AM - 10:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://g.page/illiyeen-dhanmondi?gm",
+  "lat": 23.75545,
+  "lng": 90.37313,
+  "image": "/images/stores/dhanmondi-27.jpg"
+ },
+ {
+  "slug": "uttara",
+  "title": "UTTARA SECTOR 14 MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Level 3, Pul Tower, Plot 29, Gausul Azam Avenue, Sector 14, Uttara, Dhaka 1230",
+  "contact": "(+88) 01885999007",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://g.page/ILLIYEEN-UTTARA?gm",
+  "lat": 23.87378,
+  "lng": 90.39652,
+  "image": "/images/stores/uttara.jpg"
+ },
+ {
+  "slug": "wari",
+  "title": "WARI FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "3rd Floor (Level 3), House 36/1, Rankin Street, Wari, Dhaka 1203",
+  "contact": "(+88) 01896042421",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/NFJsmEzAh2sh8f1Y6",
+  "lat": 23.71762,
+  "lng": 90.41843,
+  "image": "/images/stores/wari.jpg"
+ },
+ {
+  "slug": "bailey-road",
+  "title": "BAILEY ROAD MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Level 1, 143/2, AQP Shopping Mall, New Bailey Road, Dhaka 1217",
+  "contact": "(+88) 01898772927",
+  "hours": [
+   "11:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/X67TYGM1SK3cDguy8",
+  "lat": 23.74232,
+  "lng": 90.40564,
+  "image": "/images/stores/bailey-road.jpg"
+ },
+ {
+  "slug": "jamunah",
+  "title": "JAMUNA FUTURE PARK MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Shop No. GD014, Ground Floor, East Court, Jamuna Future Park, Baridhara, Dhaka 1229",
+  "contact": "(+88) 01885999003",
+  "hours": [
+   "11:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Thursday, Friday, Saturday)",
+   "Closed: (Wednesday)"
+  ],
+  "mapUrl": "https://g.page/JamunaFuturePark?gm",
+  "lat": 23.81342,
+  "lng": 90.42431,
+  "image": "/images/stores/jamunah.jpg"
+ },
+ {
+  "slug": "mirpur1",
+  "title": "MIRPUR-1 MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "DHAKA",
+  "address": "Ground Floor & 1st Floor, Plot 75, Bir Bikram Hemayet Uddin Road (Old Zoo Road), Block D, Section 2, Mirpur, Dhaka 1216",
+  "contact": "(+88) 01810168182",
+  "hours": [
+   "10:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://g.page/r/CdYcJz5uONqEEBA",
+  "lat": 23.80521,
+  "lng": 90.34862,
+  "image": "/images/stores/mirpur1.jpg"
+ },
+ {
+  "slug": "bashundhara-city-2-9829",
+  "title": "BASHUNDHARA CITY FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "Shop No. 101-111, Level 5, Block D, Bashundhara City, Panthapath, Dhaka 1215",
+  "contact": "(+88) 01898772930",
+  "hours": [
+   "11:00 AM - 08:00 PM (Sunday, Monday, Wednesday, Thursday, Friday, Saturday)",
+   "Closed: (Tuesday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/5xf3nZBrNr4UYo9v7",
+  "lat": 23.75034,
+  "lng": 90.39055,
+  "image": "/images/stores/bashundhara-city-2-9829.jpg"
+ },
+ {
+  "slug": "uttara-2",
+  "title": "UTTARA SECTOR 3 FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "DHAKA",
+  "address": "Level 5, Masihata Business Tower, Plot 05, Sector 03, Uttara Model Town, Dhaka 1230",
+  "contact": "(+88) 01896042430",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/CbSJ7h7MjMEa8YuH8",
+  "lat": 23.87378,
+  "lng": 90.39652,
+  "image": "/images/stores/uttara-2.jpg"
+ },
+ {
+  "slug": "mymenshing-4381",
+  "title": "MYMENSINGH FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "MYMENSINGH",
+  "address": "1st Floor, Pragati Tower, Holding No. 16, Saheb Ali Road, Natun Bazar, Mymensingh-2200",
+  "contact": "(+88) 01805469193",
+  "hours": [
+   "10:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Saturday)",
+   "Closed: (Friday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/ykoGbmFh6sJgeEWR9",
+  "lat": 24.74714,
+  "lng": 90.42031,
+  "image": "/images/stores/mymenshing-4381.jpg"
+ },
+ {
+  "slug": "narayanganj",
+  "title": "NARAYANGANJ FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "NARAYANGANJ",
+  "address": "Level 7, Almas Point Shopping Complex,  Holding No 59, Bangabandhu Road, Rail Gate No. 2, Narayanganj 1400",
+  "contact": "(+88) 01896042420",
+  "hours": [
+   "11:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/BoG3D9H2u6yFFqnk8",
+  "lat": 23.62376,
+  "lng": 90.50002,
+  "image": "/images/stores/narayanganj.jpg"
+ },
+ {
+  "slug": "sylhet",
+  "title": "SYLHET UPASHAHAR MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "SYLHET",
+  "address": "2nd Floor, Latif Tower, House 37, Block A, Main Avenue, Shahjalal Uposhahar, Sylhet 3100",
+  "contact": "(+88) 01885999009",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://g.page/r/CSJxH4PLfkOpEBA",
+  "lat": 24.89493,
+  "lng": 91.86872,
+  "image": "/images/stores/sylhet.jpg"
+ },
+ {
+  "slug": "sylhet-2-5993",
+  "title": "SYLHET KUMARPARA FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "SYLHET",
+  "address": "Ground Floor, Osman Trade Center, House 55, Block A, Kumarpara, Sylhet 3100",
+  "contact": "(+88) 01896042424",
+  "hours": [
+   "10:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/DChjd54QMtHodCYh9",
+  "lat": 24.89493,
+  "lng": 91.86872,
+  "image": "/images/stores/sylhet-2-5993.jpg"
+ },
+ {
+  "slug": "chattogram",
+  "title": "CHATTOGRAM GEC CIRCLE MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "CHATTOGRAM",
+  "address": "2nd Floor, Plot No. 1027/1316, CDA Avenue, Asian Highway Road, GEC Circle, East Nasirabad, Chattogram 4100",
+  "contact": "(+88) 01885999004",
+  "hours": [
+   "10:00 AM - 10:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://g.page/ILLIYEEN-CTG?gm",
+  "lat": 22.35876,
+  "lng": 91.8211,
+  "image": "/images/stores/chattogram.jpg"
+ },
+ {
+  "slug": "chattogram-2-2326",
+  "title": "CHATTOGRAM HALISHAHAR FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "CHATTOGRAM",
+  "address": "Level 2, Plot No. 02-03 Mobil House, Block K, Halishahar, Chattogram 4216",
+  "contact": "(+88) 01898772931",
+  "hours": [
+   "10:00 AM - 10:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/qZ8d7wgBYJiippur9",
+  "lat": 22.35876,
+  "lng": 91.8211,
+  "image": "/images/stores/chattogram-2-2326.jpg"
+ },
+ {
+  "slug": "cumilla-8986",
+  "title": "CUMILLA FLAGSHIP STORE",
+  "type": "Flagship Store",
+  "region": "Other",
+  "address": "Level 3, Silver Rahman Villa, 567 Nazrul Avenue, Kandirpar, Cumilla Sadar, Cumilla 3500",
+  "contact": "(+88) 01898772941",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Saturday)",
+   "Closed: (Friday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/C8VzJTqokKzPEWQo9",
+  "lat": 23.46071,
+  "lng": 91.18092,
+  "image": "/images/stores/cumilla-8986.jpg"
+ },
+ {
+  "slug": "khulna-5854",
+  "title": "KHULNA MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "Other",
+  "address": "Level 2, Topy Tower, B/4 Majid Sarani, Sonadanga, Khulna Sadar, Khulna 9100",
+  "contact": "(+88) 01898772944",
+  "hours": [
+   "10:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Saturday)",
+   "Closed: (Friday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/NR3wcMYHWPyrDVgQ7",
+  "lat": 22.84564,
+  "lng": 89.54032,
+  "image": "/images/stores/khulna-5854.jpg"
+ },
+ {
+  "slug": "bogura-8367",
+  "title": "BOGURA MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "Other",
+  "address": "Level 2, Amicus Plaza, Plot 168/174, Shahid Abdul Jabbar Road, Jaleswaritola, Bogura–5800",
+  "contact": "(+88) 01898772947",
+  "hours": [
+   "10:00 AM - 08:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Saturday)",
+   "Closed: (Friday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/qLJieaeQb3gKpgpK9",
+  "lat": 24.84651,
+  "lng": 89.37783,
+  "image": "/images/stores/bogura-8367.jpg"
+ },
+ {
+  "slug": "barishal-9239",
+  "title": "BARISHAL MULTI-BRAND STORE",
+  "type": "Multi-Brand Store",
+  "region": "BARISHAL",
+  "address": "Level 2, Elite Height, Plot 951, Ward 18, Bagura Road, Barishal Sadar, Barishal 8200",
+  "contact": "(+88) 01898772945",
+  "hours": [
+   "10:00 AM - 09:00 PM (Sunday, Monday, Tuesday, Wednesday, Thursday, Saturday)",
+   "Closed: (Friday)"
+  ],
+  "mapUrl": "https://maps.app.goo.gl/qcosFcKqeUSk3BGu7",
+  "lat": 22.70102,
+  "lng": 90.35351,
+  "image": "/images/stores/barishal-9239.jpg"
+ }
+]

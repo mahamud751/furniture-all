@@ -1,0 +1,251 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Customer {
+  id        String   @id @default(cuid())
+  firstName String
+  lastName  String
+  phone     String   @unique
+  email     String   @unique
+  password  String
+  address   String   @default("")
+  city      String   @default("")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  orders    Order[]
+}
+
+model Room {
+  id          String        @id @default(cuid())
+  slug        String        @unique
+  title       String
+  description String        @default("")
+  image       String        @default("")
+  sortOrder   Int           @default(0)
+  navOrder    Int           @default(0)
+  showOnHome  Boolean       @default(false)
+  children    SubCategory[]
+  products    ProductRoom[]
+}
+
+model SubCategory {
+  id        String            @id @default(cuid())
+  roomId    String
+  room      Room              @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  slug      String
+  title     String
+  image     String            @default("")
+  sortOrder Int               @default(0)
+  products  ProductCategory[]
+
+  @@unique([roomId, slug])
+}
+
+model Product {
+  id             String            @id @default(cuid())
+  code           String            @unique
+  slug           String            @unique
+  title          String
+  brand          String?
+  price          Int
+  discount       Int               @default(0)
+  finalPrice     Int
+  colors         Int               @default(1)
+  inStock        Boolean           @default(true)
+  description    String            @db.Text
+  details        String            @db.Text
+  sortOrder      Int               @default(0)
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+  images         ProductImage[]
+  specifications Specification[]
+  rooms          ProductRoom[]
+  categories     ProductCategory[]
+  homeItems      HomeBlockItem[]
+  orderItems     OrderItem[]
+
+  @@index([title])
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  sortOrder Int     @default(0)
+
+  @@index([productId])
+}
+
+model Specification {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  title     String
+  html      String  @db.Text
+  sortOrder Int     @default(0)
+
+  @@index([productId])
+}
+
+model ProductRoom {
+  productId String
+  roomId    String
+  sortOrder Int     @default(0)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  room      Room    @relation(fields: [roomId], references: [id], onDelete: Cascade)
+
+  @@id([productId, roomId])
+  @@index([roomId])
+}
+
+model ProductCategory {
+  productId     String
+  subCategoryId String
+  sortOrder     Int         @default(0)
+  product       Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  subCategory   SubCategory @relation(fields: [subCategoryId], references: [id], onDelete: Cascade)
+
+  @@id([productId, subCategoryId])
+  @@index([subCategoryId])
+}
+
+model Store {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  type      String
+  region    String
+  address   String
+  contact   String
+  hours     String[]
+  mapUrl    String   @default("")
+  lat       Float?
+  lng       Float?
+  image     String   @default("")
+  sortOrder Int      @default(0)
+  active    Boolean  @default(true)
+}
+
+model Page {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  html      String   @db.Text
+  published Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+}
+
+model Order {
+  id         String      @id @default(cuid())
+  number     String      @unique
+  customerId String?
+  customer   Customer?   @relation(fields: [customerId], references: [id], onDelete: SetNull)
+  firstName  String
+  lastName   String
+  phone      String
+  email      String
+  address    String
+  city       String
+  location   String
+  payment    String
+  status     String      @default("received")
+  subtotal   Int
+  shipping   Int
+  discount   Int
+  total      Int
+  advance    Int
+  balance    Int
+  note       String      @default("")
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  items      OrderItem[]
+
+  @@index([phone])
+  @@index([status])
+  @@index([customerId])
+}
+
+model OrderItem {
+  id        String   @id @default(cuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  code      String
+  slug      String
+  title     String
+  price     Int
+  image     String
+  quantity  Int
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String
+  subject   String   @default("Furniture enquiry")
+  body      String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([read])
+}
+
+model Setting {
+  id                            String @id @default("default")
+  phone                         String
+  phoneHref                     String
+  email                         String
+  hours                         String
+  facebook                      String
+  instagram                     String
+  insideDhaka                   Int
+  outsideDhaka                  Int
+  advancePercent                Int
+  digitalPaymentDiscountPercent Int
+  promoBanner                   String
+  heroDesktop                   String
+  heroMobile                    String
+  heroHref                      String
+  footerColumns                 Json
+}
+
+model HomeBlock {
+  id        String          @id @default(cuid())
+  kind      String
+  slug      String
+  title     String
+  sortOrder Int             @default(0)
+  items     HomeBlockItem[]
+}
+
+model HomeBlockItem {
+  id        String    @id @default(cuid())
+  blockId   String
+  block     HomeBlock @relation(fields: [blockId], references: [id], onDelete: Cascade)
+  sortOrder Int       @default(0)
+  title     String    @default("")
+  image     String    @default("")
+  href      String    @default("")
+  productId String?
+  product   Product?  @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  @@index([blockId])
+}
