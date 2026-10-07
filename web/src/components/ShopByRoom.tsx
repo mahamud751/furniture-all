@@ -19,7 +19,7 @@ export default function ShopByRoom({ rooms }: { rooms: HomeRoom[] }) {
   return (
     <section id="shop-by-room" className="scroll-mt-4 py-[50px]">
       <div className="site-container">
-        <h2 className="mb-8 text-2xl leading-[120%] font-medium text-(--primary) capitalize lg:mb-10 lg:text-5xl">
+        <h2 className="mb-8 text-2xl leading-[120%] font-medium text-(--brand) capitalize lg:mb-10 lg:text-5xl">
           Shop by Room
         </h2>
         <div className="relative min-h-189 overflow-hidden rounded-xl">

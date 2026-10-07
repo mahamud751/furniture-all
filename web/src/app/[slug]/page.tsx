@@ -22,7 +22,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     <section className="pt-8 pb-20 lg:pt-12 lg:pb-28">
       <div className="site-container">
         <Breadcrumbs className="mb-6" crumbs={[{ label: "Home", href: "/" }, { label: page.title }]} />
-        <h1 className="mb-8 text-2xl leading-[120%] font-medium lg:text-5xl">{page.title}</h1>
+        <h1 className="mb-8 text-2xl leading-[120%] font-medium text-(--brand) lg:text-5xl">{page.title}</h1>
         <article className="rounded-xl bg-white p-5 lg:p-10">
           <RichText html={page.html} />
         </article>

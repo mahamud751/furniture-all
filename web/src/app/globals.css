@@ -2,6 +2,7 @@
 
 :root {
   --primary: #121212;
+  --brand: #85b182;
   --secondary: #6e6e73;
   --tertiary: #f2f2f2;
   --quaternary: #e5e5e5;
@@ -15,6 +16,7 @@
 
 @theme inline {
   --color-primary: var(--primary);
+  --color-brand: var(--brand);
   --color-light-grey: var(--light-grey);
   --color-quinary: var(--quinary);
   --font-sans: var(--font-general-sans), sans-serif;

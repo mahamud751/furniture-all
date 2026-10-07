@@ -18,7 +18,7 @@ export default function BagView() {
   if (items.length === 0) {
     return (
       <div className="rounded-xl bg-white px-6 py-20 text-center">
-        <h1 className="text-2xl font-medium lg:text-4xl">Shopping Bag</h1>
+        <h1 className="text-2xl font-medium text-(--brand) lg:text-4xl">Shopping Bag</h1>
         <p className="mt-4 text-(--secondary)">Your bag is empty. Please go back to the shop.</p>
         <Link
           href="/shop"
@@ -32,7 +32,7 @@ export default function BagView() {
 
   return (
     <>
-      <h1 className="text-2xl leading-[120%] font-medium lg:text-5xl">Shopping Bag</h1>
+      <h1 className="text-2xl leading-[120%] font-medium text-(--brand) lg:text-5xl">Shopping Bag</h1>
       <p className="mt-3 text-sm text-(--secondary)">
         {count} {count === 1 ? "Item" : "Items"} In Bag
       </p>

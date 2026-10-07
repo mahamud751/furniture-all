@@ -36,7 +36,7 @@ async function bootstrap() {
   SwaggerModule.setup("api/docs", app, SwaggerModule.createDocument(app, config), {
     swaggerOptions: { persistAuthorization: true },
   });
-  const port = process.env.PORT ?? 4000;
+  const port = process.env.PORT ?? 3004;
   await app.listen(port);
   console.log(`API http://localhost:${port}/api`);
   console.log(`Swagger http://localhost:${port}/api/docs`);

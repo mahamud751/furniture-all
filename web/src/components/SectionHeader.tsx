@@ -12,7 +12,7 @@ export default function SectionHeader({
 }) {
   return (
     <div className="mb-8 flex items-end justify-between self-stretch border-b border-[#DDDDDD] pb-4 lg:mb-10 lg:border-0 lg:pb-0">
-      <h2 className="text-2xl leading-[120%] font-medium text-(--primary) capitalize lg:text-3xl xl:text-5xl">
+      <h2 className="text-2xl leading-[120%] font-medium text-(--brand) capitalize lg:text-3xl xl:text-5xl">
         {title}
       </h2>
       <div className="flex items-center gap-6">

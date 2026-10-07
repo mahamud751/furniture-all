@@ -98,7 +98,7 @@ export default function AccountView() {
     const creating = !profile && mode === "register";
     return (
       <div className="mx-auto max-w-xl">
-        <h1 className="text-center text-2xl font-medium lg:text-4xl">{profile ? "Personal Details" : "My Account"}</h1>
+        <h1 className="text-center text-2xl font-medium text-(--brand) lg:text-4xl">{profile ? "Personal Details" : "My Account"}</h1>
         <p className="mt-3 text-center text-sm text-(--secondary)">
           {profile ? "Update the details on your account." : "Sign in to see your orders, or create an account."}
         </p>
@@ -163,7 +163,7 @@ export default function AccountView() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <h1 className="text-2xl font-medium lg:text-5xl">My Account</h1>
+      <h1 className="text-2xl font-medium text-(--brand) lg:text-5xl">My Account</h1>
       <p className="mt-3 text-(--secondary)">Welcome back, {profile.firstName}.</p>
 
       <section className="mt-8 rounded-xl bg-white p-6">

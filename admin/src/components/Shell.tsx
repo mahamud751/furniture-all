@@ -76,7 +76,7 @@ export default function Shell({
   const nav = (
     <div className="flex h-full flex-col">
       <div className="px-5 pt-6 pb-5">
-        <img src="/logo-light.png" alt="Basha Furniture" className="h-9 w-auto" />
+        <img src="/logo-light.png" alt="Basha Furniture" className="h-20 w-auto" />
         <p className="mt-3 text-[11px] font-semibold tracking-[0.22em] text-white/45 uppercase">Admin</p>
       </div>
       <nav className="flex-1 space-y-6 overflow-y-auto px-3 pb-6">

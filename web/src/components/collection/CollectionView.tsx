@@ -141,7 +141,7 @@ export default function CollectionView({
       <section className="pt-6 pb-16 lg:pb-24">
         <div className="site-container">
           {showTitle ? (
-            <h1 className="mb-6 text-2xl leading-[120%] font-medium text-(--primary) lg:text-4xl">{title}</h1>
+            <h1 className="mb-6 text-2xl leading-[120%] font-medium text-(--brand) lg:text-4xl">{title}</h1>
           ) : (
             <h1 className="sr-only">{title}</h1>
           )}

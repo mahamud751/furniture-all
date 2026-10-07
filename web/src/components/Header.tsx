@@ -115,7 +115,7 @@ export default function Header() {
 
       {/* Main nav */}
       <nav className="relative z-35 w-full max-lg:sticky max-lg:top-0">
-        <section className="relative flex items-center justify-between border-b border-(--quaternary) bg-white px-10 backdrop-blur-[48px] max-lg:px-4 max-lg:py-3 lg:h-[71px]">
+        <section className="relative flex items-center justify-between border-b border-(--quaternary) bg-white px-10 backdrop-blur-[48px] max-lg:px-4 max-lg:py-3 lg:h-[96px]">
           <button aria-label="Open Menu" className="lg:hidden" onClick={() => setMenuOpen(true)}>
             <MenuIcon />
           </button>
@@ -125,17 +125,17 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="Basha Furniture"
-                width={267}
-                height={48}
+                width={160}
+                height={160}
                 priority
-                className="h-9 w-auto max-md:h-7"
+                className="h-16 w-auto max-md:h-14"
               />
             </Link>
           </div>
 
           <div className="no-scrollbar hidden w-max items-center overflow-auto lg:flex">
             {navLinks.map((link) => (
-              <span key={link.href} className="px-2 leading-[71px] xl:px-4">
+              <span key={link.href} className="px-2 leading-[96px] xl:px-4">
                 <Link
                   href={link.href}
                   className={`${underline} inline-flex whitespace-nowrap text-sm font-medium tracking-[0.48px] text-(--primary) after:bottom-0 hover:after:w-full ${
@@ -222,7 +222,7 @@ export default function Header() {
           >
             <CloseIcon className="h-9 w-6" />
           </button>
-          <Image src="/images/logo.png" alt="Basha Furniture" width={267} height={48} className="h-7 w-auto" />
+          <Image src="/images/logo.png" alt="Basha Furniture" width={160} height={160} className="h-14 w-auto" />
         </div>
         <ul className="divide-y divide-(--quaternary) bg-white">
           <li>

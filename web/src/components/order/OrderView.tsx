@@ -39,7 +39,7 @@ export default function OrderView({ id }: { id: string }) {
   if (!order) {
     return (
       <div className="rounded-xl bg-white px-6 py-20 text-center">
-        <h1 className="text-2xl font-medium lg:text-4xl">{error ? "Order unavailable" : "Order not found"}</h1>
+        <h1 className="text-2xl font-medium text-(--brand) lg:text-4xl">{error ? "Order unavailable" : "Order not found"}</h1>
         <p className="mt-4 text-(--secondary)">{error || "We could not find this order."}</p>
         <Link href="/" className="mt-8 inline-flex h-12 items-center rounded-[5px] bg-(--primary) px-8 text-sm font-medium text-white">
           Back to home
@@ -51,7 +51,7 @@ export default function OrderView({ id }: { id: string }) {
   return (
     <div className="mx-auto max-w-3xl">
       <p className="text-xs font-semibold tracking-[0.28em] text-(--secondary) uppercase">Order received</p>
-      <h1 className="mt-3 text-2xl font-medium lg:text-5xl">Thank you, {order.customer.firstName}.</h1>
+      <h1 className="mt-3 text-2xl font-medium text-(--brand) lg:text-5xl">Thank you, {order.customer.firstName}.</h1>
       <p className="mt-4 text-(--secondary)">
         Order ID <span className="font-medium text-(--primary)">{order.id}</span> · {when(order.createdAt)} ·{" "}
         {statusLabel[order.status] ?? order.status}

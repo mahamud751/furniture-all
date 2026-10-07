@@ -95,7 +95,7 @@ export default function ProductView({ product }: { product: ProductViewData }) {
         {product.brand && (
           <p className="text-xs font-semibold tracking-[0.28em] text-(--secondary) uppercase">{product.brand}</p>
         )}
-        <h1 className="mt-2 text-2xl leading-[120%] font-medium text-(--primary) lg:text-4xl">{product.title}</h1>
+        <h1 className="mt-2 text-2xl leading-[120%] font-medium text-(--brand) lg:text-4xl">{product.title}</h1>
         <p className="mt-3 text-sm text-(--secondary)">Product Code: {product.code}</p>
         <p className="mt-4 text-xl font-semibold text-(--primary) lg:text-2xl">
           {product.finalPrice < product.price && (

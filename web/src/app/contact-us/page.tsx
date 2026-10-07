@@ -10,7 +10,7 @@ export default async function ContactPage() {
   return (
     <section className="pt-8 pb-20 lg:pt-12 lg:pb-28">
       <div className="site-container">
-        <h1 className="text-2xl leading-[120%] font-medium lg:text-5xl">Contact Us</h1>
+        <h1 className="text-2xl leading-[120%] font-medium text-(--brand) lg:text-5xl">Contact Us</h1>
         <p className="mt-3 max-w-xl text-(--secondary)">{contact.hours}.</p>
         <div className="mt-8 grid items-start gap-6 lg:grid-cols-2">
           <ContactForm />

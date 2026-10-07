@@ -1,6 +1,6 @@
 export const webOrigin = process.env.NEXT_PUBLIC_WEB_URL ?? "http://localhost:3000";
 
-const base = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api";
+const base = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3004/api";
 const TOKEN = "furniture-admin-token";
 const USER = "furniture-admin-user";
 

@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const site = await getSite();
   return (
-    <html lang="en" className={generalSans.variable}>
-      <body className="relative antialiased">
+    <html lang="en" className={generalSans.variable} suppressHydrationWarning>
+      <body className="relative antialiased" suppressHydrationWarning>
         <SiteProvider site={site}>
           <CartProvider>
             <Header />

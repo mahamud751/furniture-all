@@ -70,7 +70,7 @@ export default function CheckoutView() {
     if (placing) return <p className="py-24 text-center text-sm text-(--secondary)">Loading...</p>;
     return (
       <div className="rounded-xl bg-white px-6 py-20 text-center">
-        <h1 className="text-2xl font-medium lg:text-4xl">Checkout</h1>
+        <h1 className="text-2xl font-medium text-(--brand) lg:text-4xl">Checkout</h1>
         <p className="mt-4 text-(--secondary)">Your bag is empty. Please go back to the shop.</p>
         <Link href="/shop" className="mt-8 inline-flex h-12 items-center rounded-[5px] bg-(--primary) px-8 text-sm font-medium text-white">
           Continue shopping
@@ -128,7 +128,7 @@ export default function CheckoutView() {
 
   return (
     <>
-      <h1 className="text-2xl leading-[120%] font-medium lg:text-5xl">Checkout</h1>
+      <h1 className="text-2xl leading-[120%] font-medium text-(--brand) lg:text-5xl">Checkout</h1>
       <div className="mt-6 rounded-lg bg-black px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
         {promoBanner}
       </div>

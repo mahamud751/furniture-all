@@ -30,7 +30,7 @@ export default async function SearchPage({
     return (
       <section className="pt-16 pb-28">
         <div className="site-container max-w-xl">
-          <h1 className="text-2xl font-medium lg:text-5xl">Search</h1>
+          <h1 className="text-2xl font-medium text-(--brand) lg:text-5xl">Search</h1>
           <p className="mt-3 text-(--secondary)">Search furniture by name or product code.</p>
           <form action="/search" className="mt-8 flex gap-3">
             <input name="q" required maxLength={40} placeholder="Bed, sofa, SS5110107" className={fieldClass} />

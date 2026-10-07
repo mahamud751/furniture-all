@@ -7,7 +7,7 @@ export class ApiError extends Error {
   }
 }
 
-const baseUrl = () => process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4000/api";
+const baseUrl = () => process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3004/api";
 
 export async function api<T>(path: string, init?: RequestInit): Promise<T> {
   const base = baseUrl();
