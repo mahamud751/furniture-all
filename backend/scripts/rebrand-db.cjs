@@ -1,39 +1,33 @@
-// One-off: rename ILLIYEEN / ILYN / SPACES content in the database to Savasaachi.
+// Rename Savasaachi branding in the database to Basha.
 require("dotenv/config");
 const { PrismaClient } = require("@prisma/client");
+const bcrypt = require("bcrypt");
 
 const prisma = new PrismaClient();
 
-const rules = [
-  [/ILLIYEEN/g, "Savasaachi"],
-  [/(?:www\.)?ilyn\.global/g, "www.savasaachi.com"],
-  [/, “ILYN”,/g, ","],
-  [/ ILYN is a sub-brand of Savasaachi[^.]*\./g, ""],
-  [/\n?<li[^>]*>ILYN (?:Facebook|Instagram) page:.*?<\/li>/g, ""],
-  [/Savasaachi, ILYN, /g, "Savasaachi, "],
-  [/Savasaachi, ILYN or/g, "Savasaachi or"],
-  [/facebook\.com\/ILYNLifeStyle/g, "facebook.com/savasaachi"],
-  [/instagram\.com\/ilynlifestyle/g, "instagram.com/savasaachi"],
-  [/\bSPACES\b/g, "Savasaachi"],
-];
-
-const fix = (text) => rules.reduce((value, [pattern, repl]) => value.replace(pattern, repl), text);
+const fix = (text) =>
+  text
+    .replace(/Savasaachi Furniture/g, "Basha Furniture")
+    .replace(/Savasaachi/g, "Basha")
+    .replace(/savasaachi/g, "basha")
+    .replace(/SAVASAACHI/g, "BASHA");
 
 async function main() {
   let changed = 0;
 
   for (const page of await prisma.page.findMany()) {
+    const title = fix(page.title);
     const html = fix(page.html);
-    if (html !== page.html) {
-      await prisma.page.update({ where: { id: page.id }, data: { html } });
+    if (title !== page.title || html !== page.html) {
+      await prisma.page.update({ where: { id: page.id }, data: { title, html } });
       changed++;
     }
   }
 
   for (const product of await prisma.product.findMany()) {
     const data = {};
-    if (product.brand === "Spaces") data.brand = "Savasaachi";
-    for (const key of ["description", "details"]) {
+    if (product.brand && /savasaachi/i.test(product.brand)) data.brand = "Basha";
+    for (const key of ["description", "details", "title"]) {
       const next = fix(product[key]);
       if (next !== product[key]) data[key] = next;
     }
@@ -48,21 +42,32 @@ async function main() {
     await prisma.setting.update({
       where: { id: "default" },
       data: {
-        email: setting.email.replace("support@ilyn.global", "support@savasaachi.com"),
+        email: fix(setting.email),
         facebook: fix(setting.facebook),
         instagram: fix(setting.instagram),
+        promoBanner: fix(setting.promoBanner),
+        hours: fix(setting.hours),
       },
     });
     changed++;
   }
 
-  const admin = await prisma.admin.findUnique({ where: { email: "admin@ilyn.local" } });
-  if (admin) {
-    await prisma.admin.update({ where: { id: admin.id }, data: { email: "admin@savasaachi.local" } });
+  const oldAdmin = await prisma.admin.findUnique({ where: { email: "admin@savasaachi.local" } });
+  if (oldAdmin) {
+    await prisma.admin.update({ where: { id: oldAdmin.id }, data: { email: "admin@basha.local" } });
     changed++;
   }
 
-  console.log(`Rebranded ${changed} rows.`);
+  const email = (process.env.ADMIN_EMAIL ?? "admin@basha.local").toLowerCase();
+  const password = process.env.ADMIN_PASSWORD ?? "Admin@12345";
+  const name = process.env.ADMIN_NAME ?? "Admin";
+  await prisma.admin.upsert({
+    where: { email },
+    update: {},
+    create: { email, name, password: await bcrypt.hash(password, 10) },
+  });
+
+  console.log(`Rebranded ${changed} rows. Admin: ${email}`);
 }
 
 main().finally(() => prisma.$disconnect());

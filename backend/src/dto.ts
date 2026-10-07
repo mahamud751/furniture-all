@@ -53,7 +53,7 @@ export class LoginDto {
 }
 
 export class AdminLoginDto {
-  @ApiProperty({ example: "admin@savasaachi.local" })
+  @ApiProperty({ example: "admin@basha.local" })
   @IsEmail()
   email: string;
 

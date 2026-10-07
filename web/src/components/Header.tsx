@@ -121,10 +121,10 @@ export default function Header() {
           </button>
 
           <div className="max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2">
-            <Link href="/" className="inline-block" aria-label="Savasaachi home">
+            <Link href="/" className="inline-block" aria-label="Basha home">
               <Image
-                src="/images/logo.svg"
-                alt="Savasaachi Furniture"
+                src="/images/logo.png"
+                alt="Basha Furniture"
                 width={267}
                 height={48}
                 priority
@@ -222,7 +222,7 @@ export default function Header() {
           >
             <CloseIcon className="h-9 w-6" />
           </button>
-          <Image src="/images/logo.svg" alt="Savasaachi Furniture" width={267} height={48} className="h-7 w-auto" />
+          <Image src="/images/logo.png" alt="Basha Furniture" width={267} height={48} className="h-7 w-auto" />
         </div>
         <ul className="divide-y divide-(--quaternary) bg-white">
           <li>

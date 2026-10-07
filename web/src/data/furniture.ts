@@ -152,10 +152,10 @@ export const payments = [
 export const contact = {
   phone: "09666774577",
   phoneHref: "tel:+8809666774577",
-  email: "support@savasaachi.com",
+  email: "support@basha.com",
   hours: "We're available from 10.00 AM – 10.00 PM",
-  facebook: "https://www.facebook.com/savasaachi/",
-  instagram: "https://www.instagram.com/savasaachi/",
+  facebook: "https://www.facebook.com/basha/",
+  instagram: "https://www.instagram.com/basha/",
 };
 
 /** Delivery terms shown at checkout (from the product "Details" section). */

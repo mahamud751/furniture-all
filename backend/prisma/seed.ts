@@ -149,7 +149,7 @@ function decodeTitle(text: string) {
 }
 
 async function ensureAdmin() {
-  const email = (process.env.ADMIN_EMAIL ?? "admin@savasaachi.local").toLowerCase();
+  const email = (process.env.ADMIN_EMAIL ?? "admin@basha.local").toLowerCase();
   const password = process.env.ADMIN_PASSWORD ?? "Admin@12345";
   const name = process.env.ADMIN_NAME ?? "Admin";
   const hash = await bcrypt.hash(password, 10);
@@ -185,10 +185,10 @@ async function main() {
           id: "default",
           phone: "09666774577",
           phoneHref: "tel:+8809666774577",
-          email: "support@savasaachi.com",
+          email: "support@basha.com",
           hours: "We're available from 10.00 AM – 10.00 PM",
-          facebook: "https://www.facebook.com/savasaachi/",
-          instagram: "https://www.instagram.com/savasaachi/",
+          facebook: "https://www.facebook.com/basha/",
+          instagram: "https://www.instagram.com/basha/",
           insideDhaka: 1500,
           outsideDhaka: 5000,
           advancePercent: 10,

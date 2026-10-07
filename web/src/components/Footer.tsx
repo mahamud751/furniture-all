@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pb-[39px] text-center">
-          <p>© {new Date().getFullYear()} Savasaachi. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Basha. All rights reserved.</p>
         </div>
       </div>
     </footer>

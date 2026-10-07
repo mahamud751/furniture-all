@@ -26,7 +26,7 @@ async function bootstrap() {
     }),
   );
   const config = new DocumentBuilder()
-    .setTitle("Savasaachi Furniture API")
+    .setTitle("Basha Furniture API")
     .setDescription(
       "Local catalogue, orders, customers, content, and admin management for the furniture store. Prices and delivery totals are calculated by the API.",
     )

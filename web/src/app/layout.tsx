@@ -18,7 +18,7 @@ const generalSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Savasaachi Furniture", template: "%s | Savasaachi Furniture" },
+  title: { default: "Basha Furniture", template: "%s | Basha Furniture" },
   description: "Shop furniture by room — bedroom, living room, dining room, office and study furniture.",
 };
 
