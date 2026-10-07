@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Shell from "@/components/Shell";
-import { api, send, uploadImage } from "@/lib/api";
+import ImageField from "@/components/ImageField";
+import { api, send } from "@/lib/api";
 import { Banner, btn, btnDanger, btnGhost, field, label, useResource } from "@/lib/ui";
 
 type Child = { id?: string; slug: string; title: string; image: string; sortOrder: number };
@@ -79,25 +80,10 @@ export default function RoomEditorPage() {
               <span className={label}>Homepage description</span>
               <input className={field} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
             </label>
-            <label className="block sm:col-span-2">
+            <div className="block sm:col-span-2">
               <span className={label}>Image</span>
-              <div className="flex gap-2">
-                <input className={field} value={form.image} onChange={(e) => setForm({ ...form, image: e.target.value })} />
-                <label className={`${btnGhost} cursor-pointer`}>
-                  Upload
-                  <input
-                    type="file"
-                    accept="image/*"
-                    className="hidden"
-                    onChange={async (e) => {
-                      const file = e.target.files?.[0];
-                      if (!file) return;
-                      setForm({ ...form, image: await uploadImage(file) });
-                    }}
-                  />
-                </label>
-              </div>
-            </label>
+              <ImageField value={form.image} onChange={(image) => setForm((current) => ({ ...current, image }))} />
+            </div>
             <label className="block">
               <span className={label}>Catalogue order</span>
               <input className={field} type="number" value={form.sortOrder} onChange={(e) => setForm({ ...form, sortOrder: Number(e.target.value) })} />
@@ -124,7 +110,7 @@ export default function RoomEditorPage() {
             </div>
             <div className="space-y-2">
               {form.children.map((child, index) => (
-                <div key={child.id ?? index} className="grid gap-2 sm:grid-cols-[1fr_1fr_80px_auto]">
+                <div key={child.id ?? index} className="grid gap-2 rounded-lg border border-line p-3 sm:grid-cols-[1fr_1fr_80px_auto]">
                   <input className={field} placeholder="Title" value={child.title} onChange={(e) => {
                     const children = [...form.children];
                     children[index] = { ...child, title: e.target.value };
@@ -143,6 +129,14 @@ export default function RoomEditorPage() {
                   <button type="button" className="text-sm text-danger" onClick={() => setForm({ ...form, children: form.children.filter((_, item) => item !== index) })}>
                     Remove
                   </button>
+                  <div className="sm:col-span-4">
+                    <ImageField
+                      value={child.image}
+                      onChange={(image) =>
+                        setForm((current) => ({ ...current, children: current.children.map((item, i) => (i === index ? { ...item, image } : item)) }))
+                      }
+                    />
+                  </div>
                 </div>
               ))}
             </div>

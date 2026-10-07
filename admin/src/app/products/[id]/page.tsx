@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Shell from "@/components/Shell";
-import { api, media, send, uploadImage } from "@/lib/api";
+import ImageField from "@/components/ImageField";
+import { api, send, uploadImage } from "@/lib/api";
 import { Banner, area, btn, btnDanger, btnGhost, field, label, useResource } from "@/lib/ui";
 
 type Room = {
@@ -62,6 +63,7 @@ export default function ProductEditorPage() {
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
   const [loaded, setLoaded] = useState(creating);
+  const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
     if (!existing.data) return;
@@ -91,6 +93,22 @@ export default function ProductEditorPage() {
       ...current,
       [key]: current[key].includes(value) ? current[key].filter((item) => item !== value) : [...current[key], value],
     }));
+  };
+
+  const addFiles = async (files: File[]) => {
+    if (!files.length) return;
+    setUploading(true);
+    setError("");
+    try {
+      for (const file of files) {
+        const url = await uploadImage(file);
+        setForm((current) => ({ ...current, images: [...current.images, url] }));
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Upload failed.");
+    } finally {
+      setUploading(false);
+    }
   };
 
   const save = async (e: React.FormEvent) => {
@@ -195,44 +213,38 @@ export default function ProductEditorPage() {
             <section className="rounded-xl bg-white p-5 ring-1 ring-black/5">
               <div className="mb-3 flex items-center justify-between">
                 <h2 className="font-medium">Images</h2>
-                <label className={`${btnGhost} cursor-pointer`}>
-                  Upload
+                <label className={`${btnGhost} cursor-pointer ${uploading ? "pointer-events-none opacity-50" : ""}`}>
+                  {uploading ? "Uploading..." : "Upload images"}
                   <input
                     type="file"
-                    accept="image/*"
+                    accept="image/jpeg,image/png,image/webp,image/gif"
+                    multiple
                     className="hidden"
-                    onChange={async (e) => {
-                      const file = e.target.files?.[0];
+                    onChange={(e) => {
+                      const files = Array.from(e.target.files ?? []);
                       e.target.value = "";
-                      if (!file) return;
-                      try {
-                        const url = await uploadImage(file);
-                        set("images", [...form.images, url]);
-                      } catch (err) {
-                        setError(err instanceof Error ? err.message : "Upload failed.");
-                      }
+                      void addFiles(files);
                     }}
                   />
                 </label>
               </div>
               <div className="space-y-3">
                 {form.images.map((image, index) => (
-                  <div key={`${image}-${index}`} className="flex items-center gap-3">
-                    <img src={media(image)} alt="" className="h-16 w-12 rounded-md object-cover" />
-                    <input
-                      className={field}
-                      value={image}
-                      onChange={(e) => {
-                        const images = [...form.images];
-                        images[index] = e.target.value;
-                        set("images", images);
-                      }}
-                    />
-                    <button type="button" className="text-sm text-danger" onClick={() => set("images", form.images.filter((_, item) => item !== index))}>
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="min-w-0 flex-1">
+                      <ImageField
+                        value={image}
+                        onChange={(url) =>
+                          setForm((current) => ({ ...current, images: current.images.map((item, i) => (i === index ? url : item)) }))
+                        }
+                      />
+                    </div>
+                    <button type="button" className="text-sm text-danger" onClick={() => setForm((current) => ({ ...current, images: current.images.filter((_, item) => item !== index) }))}>
                       Remove
                     </button>
                   </div>
                 ))}
+                {!form.images.length && <p className="text-sm text-muted">No images yet. Upload or drop files, or add a path.</p>}
                 <button type="button" className="text-sm underline" onClick={() => set("images", [...form.images, ""])}>
                   Add image path
                 </button>

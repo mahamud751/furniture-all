@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Shell from "@/components/Shell";
+import ImageField from "@/components/ImageField";
 import { send } from "@/lib/api";
 import { Banner, btn, field, label, useResource } from "@/lib/ui";
 
@@ -22,10 +23,20 @@ export default function HomepagePage() {
   }, [data]);
 
   const updateBlock = (index: number, block: Block) => {
-    if (!form) return;
-    const blocks = [...form.blocks];
-    blocks[index] = block;
-    setForm({ ...form, blocks });
+    setForm((current) => (current ? { ...current, blocks: current.blocks.map((item, i) => (i === index ? block : item)) } : current));
+  };
+
+  const updateItem = (index: number, itemIndex: number, patch: Partial<Item>) => {
+    setForm((current) =>
+      current
+        ? {
+            ...current,
+            blocks: current.blocks.map((block, i) =>
+              i === index ? { ...block, items: block.items.map((item, j) => (j === itemIndex ? { ...item, ...patch } : item)) } : block,
+            ),
+          }
+        : current,
+    );
   };
 
   const save = async (e: React.FormEvent) => {
@@ -51,8 +62,8 @@ export default function HomepagePage() {
         <form onSubmit={save} className="max-w-4xl space-y-6">
           <section className="grid gap-4 rounded-xl bg-white p-5 ring-1 ring-black/5 sm:grid-cols-2">
             <h2 className="font-medium sm:col-span-2">Hero</h2>
-            <label className="block"><span className={label}>Desktop image</span><input className={field} value={form.heroDesktop} onChange={(e) => setForm({ ...form, heroDesktop: e.target.value })} /></label>
-            <label className="block"><span className={label}>Mobile image</span><input className={field} value={form.heroMobile} onChange={(e) => setForm({ ...form, heroMobile: e.target.value })} /></label>
+            <div className="block"><span className={label}>Desktop image</span><ImageField value={form.heroDesktop} onChange={(heroDesktop) => setForm((current) => (current ? { ...current, heroDesktop } : current))} /></div>
+            <div className="block"><span className={label}>Mobile image</span><ImageField value={form.heroMobile} onChange={(heroMobile) => setForm((current) => (current ? { ...current, heroMobile } : current))} /></div>
             <label className="block sm:col-span-2"><span className={label}>Hero link</span><input className={field} value={form.heroHref} onChange={(e) => setForm({ ...form, heroHref: e.target.value })} /></label>
           </section>
           {form.blocks.map((block, index) => (
@@ -86,11 +97,9 @@ export default function HomepagePage() {
                         items[itemIndex] = { ...item, title: e.target.value };
                         updateBlock(index, { ...block, items });
                       }} />
-                      <input className={field} placeholder="Image" value={item.image} onChange={(e) => {
-                        const items = [...block.items];
-                        items[itemIndex] = { ...item, image: e.target.value };
-                        updateBlock(index, { ...block, items });
-                      }} />
+                      <div className="sm:col-span-2">
+                        <ImageField value={item.image} onChange={(image) => updateItem(index, itemIndex, { image })} />
+                      </div>
                       <input className={`${field} sm:col-span-2`} placeholder="Link" value={item.href} onChange={(e) => {
                         const items = [...block.items];
                         items[itemIndex] = { ...item, href: e.target.value };

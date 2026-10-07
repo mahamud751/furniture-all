@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Shell from "@/components/Shell";
-import { api, send, uploadImage } from "@/lib/api";
+import ImageField from "@/components/ImageField";
+import { api, send } from "@/lib/api";
 import { Banner, btn, btnDanger, btnGhost, field, label, useResource } from "@/lib/ui";
 
 type Store = {
@@ -123,19 +124,10 @@ export default function StoreEditorPage() {
               <span className={label}>Sort order</span>
               <input className={field} type="number" value={form.sortOrder} onChange={(e) => setForm({ ...form, sortOrder: Number(e.target.value) })} />
             </label>
-            <label className="block">
+            <div className="block sm:col-span-2">
               <span className={label}>Image</span>
-              <div className="flex gap-2">
-                <input className={field} value={form.image} onChange={(e) => setForm({ ...form, image: e.target.value })} />
-                <label className={`${btnGhost} cursor-pointer`}>
-                  Upload
-                  <input type="file" accept="image/*" className="hidden" onChange={async (e) => {
-                    const file = e.target.files?.[0];
-                    if (file) setForm({ ...form, image: await uploadImage(file) });
-                  }} />
-                </label>
-              </div>
-            </label>
+              <ImageField value={form.image} onChange={(image) => setForm((current) => ({ ...current, image }))} />
+            </div>
           </div>
           <label className="flex items-center gap-2 text-sm">
             <input type="checkbox" checked={form.active} onChange={(e) => setForm({ ...form, active: e.target.checked })} />
