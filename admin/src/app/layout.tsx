@@ -11,8 +11,8 @@ const generalSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Furniture Admin",
-  description: "Manage the ILLIYEEN furniture catalogue, orders, stores, and content.",
+  title: "Savasaachi Admin",
+  description: "Manage the Savasaachi furniture catalogue, orders, stores, and content.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

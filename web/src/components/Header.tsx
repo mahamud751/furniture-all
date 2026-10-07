@@ -120,15 +120,15 @@ export default function Header() {
             <MenuIcon />
           </button>
 
-          <div className="max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2 lg:w-35">
-            <Link href="/" className="inline-block">
+          <div className="max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2">
+            <Link href="/" className="inline-block" aria-label="Savasaachi home">
               <Image
-                src="/images/logo.png"
-                alt="Logo"
-                width={69}
-                height={47}
+                src="/images/logo.svg"
+                alt="Savasaachi Furniture"
+                width={267}
+                height={48}
                 priority
-                className="h-auto w-[69px] max-md:w-[58px]"
+                className="h-9 w-auto max-md:h-7"
               />
             </Link>
           </div>
@@ -222,7 +222,7 @@ export default function Header() {
           >
             <CloseIcon className="h-9 w-6" />
           </button>
-          <Image src="/images/logo.png" alt="Logo" width={58} height={40} className="h-auto w-[58px]" />
+          <Image src="/images/logo.svg" alt="Savasaachi Furniture" width={267} height={48} className="h-7 w-auto" />
         </div>
         <ul className="divide-y divide-(--quaternary) bg-white">
           <li>

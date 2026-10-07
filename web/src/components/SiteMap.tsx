@@ -60,7 +60,7 @@ export default function SiteMap() {
           </div>
         </div>
         <div className="flex justify-center pb-20 lg:pb-31">
-          <Image src="/images/logo-white.svg" alt="ILLIYEEN" width={285} height={196} className="h-auto w-50 lg:w-[285px]" />
+          <Image src="/images/logo-stacked-white.svg" alt="Savasaachi Furniture" width={274} height={145} className="h-auto w-50 lg:w-[285px]" />
         </div>
       </div>
     </div>

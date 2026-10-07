@@ -76,8 +76,8 @@ export default function Shell({
   const nav = (
     <div className="flex h-full flex-col">
       <div className="px-5 pt-6 pb-5">
-        <p className="text-[11px] font-semibold tracking-[0.22em] text-white/45 uppercase">ILLIYEEN</p>
-        <p className="mt-1 text-lg font-medium text-white">Furniture Admin</p>
+        <img src="/logo-light.svg" alt="Savasaachi Furniture" className="h-9 w-auto" />
+        <p className="mt-3 text-[11px] font-semibold tracking-[0.22em] text-white/45 uppercase">Admin</p>
       </div>
       <nav className="flex-1 space-y-6 overflow-y-auto px-3 pb-6">
         {groups.map((group) => (

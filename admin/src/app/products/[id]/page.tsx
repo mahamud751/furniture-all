@@ -36,7 +36,7 @@ const empty = {
   code: "",
   slug: "",
   title: "",
-  brand: "Spaces",
+  brand: "Savasaachi",
   price: 0,
   discount: 0,
   colors: 1,
