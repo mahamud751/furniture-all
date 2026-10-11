@@ -97,12 +97,6 @@ export default function Header() {
               Bangladesh
             </span>
           </div>
-          <Link
-            href="/store-locations"
-            className={`${underline} text-sm font-medium after:-bottom-1.5 after:w-0 hover:after:w-full`}
-          >
-            Store Locations
-          </Link>
         </div>
       </div>
 
@@ -262,7 +256,6 @@ export default function Header() {
           })}
         </ul>
         <div className="space-y-4 px-6 py-6 pb-32 text-sm font-medium text-(--grey-00)">
-          <Link href="/store-locations" className="block">Store Locations</Link>
           <Link href="/contact-us" className="block">Contact Us</Link>
           <a href={`mailto:${contact.email}`} className="flex items-center gap-2">
             <MailIcon className="size-5" />

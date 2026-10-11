@@ -107,7 +107,6 @@ export const infoLinks = [
   { label: "Exchange & Refund", href: "/exchange-return" },
   { label: "Loyalty Program", href: "/loyalty-program" },
   { label: "Terms & Conditions", href: "/terms-conditions" },
-  { label: "Store Locations", href: "/store-locations" },
   { label: "Gift Card Policy", href: "/gift-card-policy" },
 ];
 
@@ -127,7 +126,6 @@ export const footerColumns = [
     links: [
       { label: "Exchange & Refund", href: "/exchange-return" },
       { label: "Loyalty Program", href: "/loyalty-program" },
-      { label: "Store Locations", href: "/store-locations" },
     ],
   },
   {

@@ -120,12 +120,6 @@ export const HomeIcon = (props: P) => (
   </svg>
 );
 
-export const MapIcon = (props: P) => (
-  <svg width="23" height="22" viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M8 3 2.7 5.1A1 1 0 0 0 2 6v14a1 1 0 0 0 1.4.9L8 19V3Zm2 0v16l4 2V5l-4-2Zm6 2v16l5.3-2.1A1 1 0 0 0 22 18V4a1 1 0 0 0-1.4-.9L16 5Z" />
-  </svg>
-);
-
 export const FacebookIcon = (props: P) => (
   <svg viewBox="0 0 32 32" fill="currentColor" {...props}>
     <path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z" />

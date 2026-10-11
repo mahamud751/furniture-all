@@ -3,11 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCart } from "./cart/CartProvider";
-import { BagIconFilled, HomeIcon, MapIcon, UserIconFilled } from "./icons";
+import { BagIconFilled, HomeIcon, UserIconFilled } from "./icons";
 
 const items = [
   { label: "Home", href: "/", Icon: HomeIcon, iconClass: "h-4.5 w-4.25" },
-  { label: "Store Locations", href: "/store-locations", Icon: MapIcon, iconClass: "" },
   { label: "Shopping Bag", href: "/bag", Icon: BagIconFilled, iconClass: "" },
   { label: "Account", href: "/account", Icon: UserIconFilled, iconClass: "" },
 ];

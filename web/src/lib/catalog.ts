@@ -56,20 +56,6 @@ export type ProductDetail = {
   related: ProductCardData[];
 };
 
-export type StoreRecord = {
-  slug: string;
-  title: string;
-  type: string;
-  region: string;
-  address: string;
-  contact: string;
-  hours: string[];
-  mapUrl: string;
-  lat: number | null;
-  lng: number | null;
-  image: string;
-};
-
 async function missing<T>(path: string): Promise<T | null> {
   try {
     return await api<T>(path);
@@ -105,10 +91,6 @@ export function getProduct(slug: string) {
 
 export function searchProducts(query: string) {
   return api<ProductCardData[]>(`/catalog/search?q=${encodeURIComponent(query)}`);
-}
-
-export function getStores() {
-  return api<StoreRecord[]>("/stores");
 }
 
 export function getContentPage(slug: string) {

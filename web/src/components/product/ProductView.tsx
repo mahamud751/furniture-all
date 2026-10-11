@@ -151,12 +151,6 @@ export default function ProductView({ product }: { product: ProductViewData }) {
         >
           {product.inStock ? "Add to bag" : "Out Of Stock"}
         </button>
-        <Link
-          href="/store-locations"
-          className="mt-3 flex h-12 w-full items-center justify-center rounded-[5px] border border-(--primary) text-sm font-medium text-(--primary)"
-        >
-          Find in store
-        </Link>
 
         <DeliveryNote className="mt-5" />
         <Link href="/shipping-policy" className="mt-2 inline-block text-sm font-medium underline">

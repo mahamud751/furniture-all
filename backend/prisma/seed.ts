@@ -127,7 +127,6 @@ const footerColumns = [
     links: [
       { label: "Exchange & Refund", href: "/exchange-return" },
       { label: "Loyalty Program", href: "/loyalty-program" },
-      { label: "Store Locations", href: "/store-locations" },
     ],
   },
   {
