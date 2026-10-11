@@ -26,7 +26,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     <>
       <section className="pt-6 pb-8 lg:pb-12">
         <div className="site-container">
-          <div className="mb-6 rounded-lg bg-black px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
+          <div className="mb-6 rounded-lg bg-(--primary) px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
             {site.promoBanner}
           </div>
           <Breadcrumbs

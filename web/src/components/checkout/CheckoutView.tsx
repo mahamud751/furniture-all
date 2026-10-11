@@ -129,7 +129,7 @@ export default function CheckoutView() {
   return (
     <>
       <h1 className="text-2xl leading-[120%] font-medium text-(--brand) lg:text-5xl">Checkout</h1>
-      <div className="mt-6 rounded-lg bg-black px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
+      <div className="mt-6 rounded-lg bg-(--primary) px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
         {promoBanner}
       </div>
 

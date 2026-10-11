@@ -36,7 +36,7 @@ export default function BagView() {
       <p className="mt-3 text-sm text-(--secondary)">
         {count} {count === 1 ? "Item" : "Items"} In Bag
       </p>
-      <div className="mt-6 rounded-lg bg-black px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
+      <div className="mt-6 rounded-lg bg-(--primary) px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
         {promoBanner}
       </div>
 

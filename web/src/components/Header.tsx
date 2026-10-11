@@ -107,7 +107,7 @@ export default function Header() {
       </div>
 
       {/* Mobile deliver-to bar */}
-      <div className="flex h-9 items-center gap-2 bg-black px-6 text-xs font-medium text-white lg:hidden">
+      <div className="flex h-9 items-center gap-2 bg-(--primary) px-6 text-xs font-medium text-white lg:hidden">
         <PinIcon className="text-white" />
         <span>Deliver to</span>
         <span className="font-semibold">Bangladesh</span>

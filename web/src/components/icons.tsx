@@ -100,7 +100,7 @@ export const AddToBagIcon = (props: P) => (
 );
 
 export const MenuIcon = (props: P) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <path d="M3.97 5.97H19.97" />
     <path d="M3.97 11.97H19.97" />
     <path d="M3.97 17.97H19.97" />

@@ -173,7 +173,7 @@ export default function CollectionView({
             </div>
           </div>
 
-          <div className="mb-6 rounded-lg bg-black px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
+          <div className="mb-6 rounded-lg bg-(--primary) px-4 py-3 text-center text-sm font-medium text-white lg:text-base">
             {promoBanner}
           </div>
 
